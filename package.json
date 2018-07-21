@@ -1,0 +1,17 @@
+{
+  "name": "test-selenium",
+  "version": "1.0.0",
+  "description": "My personal test of the selenium web frontend testing framework",
+  "main": "index.js",
+  "scripts": {
+    "test": "test"
+  },
+  "keywords": [
+    "selenium"
+  ],
+  "author": "Gabriel Hutchison",
+  "license": "ISC",
+  "dependencies": {
+    "selenium-webdriver": "^4.0.0-alpha.1"
+  }
+}
