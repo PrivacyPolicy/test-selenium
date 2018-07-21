@@ -4,7 +4,7 @@
   "description": "My personal test of the selenium web frontend testing framework",
   "main": "index.js",
   "scripts": {
-    "test": "test"
+    "start": "jest"
   },
   "keywords": [
     "selenium"
@@ -12,6 +12,8 @@
   "author": "Gabriel Hutchison",
   "license": "ISC",
   "dependencies": {
+    "chromedriver": "^2.40.0",
+    "jest": "^23.4.1",
     "selenium-webdriver": "^4.0.0-alpha.1"
   }
 }
