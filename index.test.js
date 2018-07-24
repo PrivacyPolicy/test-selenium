@@ -30,7 +30,7 @@ describe('Search', () => {
     return expect(driver.getTitle()).resolves.toMatch('foobar');
   });
 
-  it('skips results page when I\m Feeling Lucky is clicked', async () => {
+  it('skips results page when I\'m Feeling Lucky is clicked', async () => {
     expect.assertions(1);
     await driver.get('http://www.google.com/ncr');
     await driver.findElement(By.name('q')).sendKeys('foobar');
@@ -39,7 +39,14 @@ describe('Search', () => {
     await button.click();
     await driver.wait(until.titleContains('foobar'), 1000);
     const url = await driver.getCurrentUrl();
-    expect(url).not.toMatch('google.com');
+    return expect(url).not.toMatch('google.com');
+  });
+
+  it('has \'Google\' in the title', async () => {
+     expect.assertions(1);
+     await driver.get('http://www.google.com/ncr');
+     await driver.wait(until.titleContains('Google'), 1000);
+     return expect(driver.getTitle()).resolves.toMatch('Google');
   });
 });
 
